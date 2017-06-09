@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ICAppBrowser_Example' do
+  pod 'ICAppBrowser', :path => '../'
+
+  target 'ICAppBrowser_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
