@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ICAppBrowser
 
 class ViewController: UIViewController {
 
@@ -19,6 +20,40 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: Push
+    @IBAction func push() {
+        
+        let webVC = ICAppBrowserVC(urlString: "https://www.google.com")
+        webVC.delegate = self
+        self.navigationController?.pushViewController(webVC, animated: true)
+    }
+    
+    // MARK: Modal
+    @IBAction func presentModalWithDefaultTheme() {
 
+        //Example 1
+//        let webVC = ICAppBrowserModalVC(urlString: "https://www.google.com")
+//        self.present(webVC, animated: true, completion: nil)
+        
+        // Example 2
+//        let webVC = ICAppBrowserModalVC(urlString: "https://www.google.com", theme: .lightBlack, dismissButtonStyle: .cross)
+//        self.present(webVC, animated: true, completion: nil)
+        
+        // Example 3
+        let webVC = ICAppBrowserModalVC(urlString: "https://www.google.com", theme: .dark, dismissButtonStyle: .arrow)
+        self.present(webVC, animated: true, completion: nil)
+        
+    }
+    
 }
 
+extension ViewController: ICBrowserVCDelegate {
+    func didStartLoading() {
+        print("started")
+    }
+    
+    func didFinishLoading(success: Bool) {
+        print("Finish")
+    }
+}
