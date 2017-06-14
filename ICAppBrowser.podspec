@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ICAppBrowser'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'ICAppBrowser is a inline browser for your Swift iOS app.'
 
   s.description      = <<-DESC
