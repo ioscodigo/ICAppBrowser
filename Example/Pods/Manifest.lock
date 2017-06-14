@@ -1,0 +1,16 @@
+PODS:
+  - ICAppBrowser (0.1.0)
+
+DEPENDENCIES:
+  - ICAppBrowser (from `../`)
+
+EXTERNAL SOURCES:
+  ICAppBrowser:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ICAppBrowser: 6b923739c42a86dc657b4fe7583b3c48cd18fdd4
+
+PODFILE CHECKSUM: 521fde2f29d51c3f4c5c5a7f82e539c9a6cf2086
+
+COCOAPODS: 1.2.1
